@@ -40,25 +40,33 @@
     <p>O foca será nas três principais partes que compõem a Linguagem SQL,
         a DDL, a DML e a DQL.</p>
 
-     <p>Para exemplo dos comandos iremos criar uma base dados utilizando o exemplo de uma linha área onde temos o banco com o nome: linhaarea e as receptivas tabelas passageiros, reservas e voos </p>   
+    <hr>
+
+    <p>Para exemplo dos comandos iremos criar uma base dados utilizando o exemplo de uma linha área onde temos o banco
+        com o nome: linhaarea e as receptivas tabelas passageiros, reservas e voos </p>
 
     <hr>
     <h2>Tópico - Linguagem de Definição de Dados (DDL)</h2>
-     
-    <p> Para a criação da nossa database: </p> 
-    <p style="color: rgba(0, 188, 245, 0.836)" > create database linhaarea; </p>
-    
+
+    <p> Para a criação da nossa database: </p>
+    <p style="color: rgba(0, 188, 245, 0.836)"> create database linhaarea; </p>
+
     <p>Criação da tabela “passageiros “</p>
-    <p style="color: rgba(0, 188, 245, 0.836)" > create table passageiros (rg int, nome varchar(50), idade int, primary key (rg)); </p>
+    <p style="color: rgba(0, 188, 245, 0.836)"> create table passageiros (rg int, nome varchar(50), idade int, primary
+        key (rg)); </p>
 
     <p>Criação da tabela da tabela “Voo”</p>
-    <p style="color: rgba(0, 188, 245, 0.836)" > create table Voos (NumeroVoo varchar(3), data date,lugar int, primary key (NumeroVoo)); </p>
+    <p style="color: rgba(0, 188, 245, 0.836)"> create table Voos (NumeroVoo varchar(3), data date,lugar int, primary
+        key (NumeroVoo)); </p>
 
     <p>Criação da tabela “Reservas “</p>
-    <p style="color: rgba(0, 188, 245, 0.836)" > create table reservas (rg int,NumeroVoo varchar(3),valor float, primary key (rg,NumeroVoo), foreign key (rg) references passageiros (rg),foreign key (NumeroVoo) references voos (NumeroVoo)); </p>
+    <p style="color: rgba(0, 188, 245, 0.836)"> create table reservas (rg int,NumeroVoo varchar(3),valor float, primary
+        key (rg,NumeroVoo), foreign key (rg) references passageiros (rg),foreign key (NumeroVoo) references voos
+        (NumeroVoo)); </p>
 
-    <p style="color: rgba(204, 86, 86, 0.836)">Note que a tabela “Reserva “faz se referência as tabelas “Passageiros” e “Voos” devido a sua relação.</p>
-    
+    <p style="color: rgba(204, 86, 86, 0.836)">Note que a tabela “Reserva “faz se referência as tabelas “Passageiros” e
+        “Voos” devido a sua relação.</p>
+
 
 
 
